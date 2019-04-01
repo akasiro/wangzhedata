@@ -44,7 +44,7 @@ class spider(object):
 
         date = soup.find('span',{'id':'Freleasetime'}).get_text()
         pagedetail = soup.find('div',{'id':'pageDetail'}).get_text()
-        filename = '{}.txt'.format(date[0:9])
+        filename = '{}{}.txt'.format(date[0:9],title)
         content = '{}\n{}\n{}'.format(title,date,pagedetail)
 
         self.savedata(filename,content)
