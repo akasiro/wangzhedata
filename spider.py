@@ -29,7 +29,7 @@ class spider(object):
             art_url = urljoin(self.starturl,art_url)
             self.get_content(art_url)
 
-        next_page = soup.find('a',{'class' :'fr', 'title': '下一页' })
+        next_page = soup.find('a',{'class' :'fr' })
         if next_page != None:
             next_page_url = next_page['href']
         else:
